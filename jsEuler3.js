@@ -13,15 +13,16 @@ function isPrime(value) {
     return true;
 }
 
-var myNumber = 600851475143;
 var primeFactors = [];
 
+function getLargestPrimeFactor(num) {
+
 for (var i = 0; i <= 1000; i++) {
-	if (600851475143 % i === 0 && isPrime(i) === true) {
+    if (num % i === 0 && isPrime(i) === true) {
 		primeFactors.push(i);
 	}
 }
-
-var biggestPrimeFactor = primeFactors[primeFactors.length - 1];
-
-console.log(biggestPrimeFactor);
+	var biggestPrimeFactor = primeFactors[primeFactors.length - 1];
+	console.log(biggestPrimeFactor);
+}
+getLargestPrimeFactor(600851475143);
